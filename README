@@ -1,0 +1,10 @@
+This is a project I worked on four years ago while recovering from an accident. It was used to participate in the Kaggle
+Wikipedia challenge. It was under development when I stopped working on it, so some things aren't in the best order
+right now. Since then I've become a big advocate of TDD and SCRUM style development with working builds at the end of
+each iteration.
+
+It is an implementation of Genetic Programming using Java. The basic idea is to generate a population of random
+programs using a set of operations, then run them through a series of competitive iterations. After each iteration, the
+best performing programs are selected, some are mutated, some are cross-bred with each other, then another iteration is
+run. At the end of either a set number of generations, or after a performance threshold is reached, the best program is
+selected and can then be used as a classifier.
