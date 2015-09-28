@@ -18,31 +18,26 @@ public class TunedCompositeIndividual implements Individual {
 		this.dataSet = dataSet;
 	}
 	
-	@Override
 	public double getProportionalFitness() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
 	public double getFitness() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
 	public void setFitness(double fitness) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public int compareTo(Object arg) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
 	public Object evaluate(Double... data) {
 		double[] wekaData = new double[data.length+1];
 		int i = 0;

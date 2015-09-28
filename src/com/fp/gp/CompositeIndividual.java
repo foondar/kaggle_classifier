@@ -26,7 +26,6 @@ public class CompositeIndividual implements Individual {
 	/* (non-Javadoc)
 	 * @see com.fp.gp.Individual#getProportionalFitness()
 	 */
-	@Override
 	public double getProportionalFitness() {
 		return proportionalFitness;
 	}
@@ -38,7 +37,6 @@ public class CompositeIndividual implements Individual {
 	/* (non-Javadoc)
 	 * @see com.fp.gp.Individual#getFitness()
 	 */
-	@Override
 	public double getFitness() {
 		return fitness;
 	}
@@ -46,12 +44,10 @@ public class CompositeIndividual implements Individual {
 	/* (non-Javadoc)
 	 * @see com.fp.gp.Individual#setFitness(double)
 	 */
-	@Override
 	public void setFitness(double fitness) {
 		this.fitness = fitness;
 	}
 
-	@Override
 	public int compareTo(Object arg) {
 		Individual other = (Individual) arg;
 		if (this.fitness < other.getFitness()) return 1;

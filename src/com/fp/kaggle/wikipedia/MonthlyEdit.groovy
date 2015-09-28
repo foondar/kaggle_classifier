@@ -1,7 +1,7 @@
 package com.fp.kaggle.wikipedia
 import java.text.SimpleDateFormat;
 
-import org.apache.ivy.core.search.RevisionEntry;
+//import org.apache.ivy.core.search.RevisionEntry;
 
 class MonthlyEdit {
 	Date month

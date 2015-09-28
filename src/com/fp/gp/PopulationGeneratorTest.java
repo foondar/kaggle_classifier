@@ -37,10 +37,10 @@ public class PopulationGeneratorTest {
 		}
 		PopulationGenerator gen = new PopulationGenerator();
 		Population pop = gen.generate(100, Double.class, 10, 0, null, inputs);
-		for (DoubleFunctionOp func : pop.getFunctions()) {
-			System.out.println(func.genome.prettyPrint());
-			System.out.println("\n\n");
-		}
+//		for (DoubleFunctionOp func : pop.getFunctions()) {
+//			System.out.println(func.getGenome().prettyPrint());
+//			System.out.println("\n\n");
+//		}
 		
 		for (DefaultIndividual ind : pop.getIndividuals()) {
 			System.out.println(ind.getGenome().prettyPrint());

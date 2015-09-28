@@ -15,7 +15,7 @@ public class PopulationGenerator {
 		initOperators();
 		ops.addAll(inputs);
 		ops.addAll(otherOps);
-		generateFunctions(10);
+//		generateFunctions(10);
 		
 		Population pop = new Population(inputs);
 //		pop.setFunctions(functions);
@@ -67,7 +67,7 @@ public class PopulationGenerator {
 		ops.add(new BooleanLeafOp(false));
 	}
 	
-	protected void generateFunctions(Individual ind) {
+/*	protected void generateFunctions(int count) {
 		functions.clear();
 		for (int i = 0; i < count;i++) {
 			TreeGenerator gen = new DefaultTreeGenerator(ops);
@@ -78,4 +78,5 @@ public class PopulationGenerator {
 			functions.add(func);
 		}
 	}
+	*/
 }

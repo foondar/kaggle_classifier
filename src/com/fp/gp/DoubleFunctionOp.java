@@ -2,7 +2,7 @@ package com.fp.gp;
 
 import java.util.List;
 
-public class DoubleFunctionOp extends ArithmeticOperator {
+public abstract class DoubleFunctionOp extends ArithmeticOperator {
 
 
 	Individual ind;
@@ -50,7 +50,7 @@ public class DoubleFunctionOp extends ArithmeticOperator {
 	public void setRightInput(DoubleInputOp rightInput) {
 		this.rightInput = rightInput;
 	}
-
+/*
 	public Node getGenome() {
 		return this.getIndividual().getFunctionGenome(functionNdx);
 	}
@@ -59,14 +59,13 @@ public class DoubleFunctionOp extends ArithmeticOperator {
 		this.getIndividual().setFunctionGenome(functionNdx, genome);
 	}
 
-	@Override
 	public Object evaluate(Object... arguments) {
 		leftInput.setValue((Double)arguments[0]);
 		rightInput.setValue((Double)arguments[1]);
 		return this.getGenome().evaluate();
 	}
+	*/
 
-	@Override
 	public String getName() {
 		return name;
 	}

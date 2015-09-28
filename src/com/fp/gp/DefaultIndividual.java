@@ -17,7 +17,11 @@ public class DefaultIndividual implements Comparable, Serializable, Individual{
 	List<Node> functionNodes = new ArrayList<Node>();
 	
 	List<DoubleInputOp> inputs = new ArrayList<DoubleInputOp>();
-	
+
+	public DefaultIndividual(List<DoubleInputOp> inputs) {
+		this.inputs = inputs;
+		this.functionCount = 1;
+	}
 	public DefaultIndividual(List<DoubleInputOp> inputs, int functionCount) {
 		this.inputs = inputs;
 		this.functionCount = functionCount;
@@ -34,7 +38,6 @@ public class DefaultIndividual implements Comparable, Serializable, Individual{
 	/* (non-Javadoc)
 	 * @see com.fp.gp.Individual#getProportionalFitness()
 	 */
-	@Override
 	public double getProportionalFitness() {
 		return proportionalFitness;
 	}
@@ -46,7 +49,6 @@ public class DefaultIndividual implements Comparable, Serializable, Individual{
 	/* (non-Javadoc)
 	 * @see com.fp.gp.Individual#getFitness()
 	 */
-	@Override
 	public double getFitness() {
 		return fitness;
 	}
@@ -54,7 +56,6 @@ public class DefaultIndividual implements Comparable, Serializable, Individual{
 	/* (non-Javadoc)
 	 * @see com.fp.gp.Individual#setFitness(double)
 	 */
-	@Override
 	public void setFitness(double fitness) {
 		this.fitness = fitness;
 	}
@@ -63,7 +64,6 @@ public class DefaultIndividual implements Comparable, Serializable, Individual{
 	 * @see com.fp.gp.Individual#compareTo(java.lang.Object)
 	 */
 	
-	@Override
 	public  int compareTo(Object arg) {
 		Individual other = (Individual) arg;
 		if (this.fitness < other.getFitness()) return 1;
@@ -74,7 +74,6 @@ public class DefaultIndividual implements Comparable, Serializable, Individual{
 	/* (non-Javadoc)
 	 * @see com.fp.gp.Individual#evaluate(java.lang.Double)
 	 */
-	@Override
 	public Object evaluate(Double... data) {
 		int i = 0;
 		boolean all_zeroes = true;
@@ -97,13 +96,11 @@ public class DefaultIndividual implements Comparable, Serializable, Individual{
 		return ind;
 	}
 
-	@Override
 	public Node getFunctionGenome(int functionNdx) {
 		if (functionNdx >= getFunctionCount()) throw new IllegalArgumentException("functionNdx >= functinCount");
 		return functionNodes.get(functionNdx);
 	}
 
-	@Override
 	public void setFunctionGenome(int functionNdx, Node genome) {
 		if (functionNdx >= getFunctionCount()) throw new IllegalArgumentException("functionNdx >= functinCount");
 		functionNodes.set(functionNdx, genome);

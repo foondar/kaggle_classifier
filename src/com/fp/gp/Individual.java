@@ -12,8 +12,8 @@ public interface Individual {
 
 	public abstract Object evaluate(Double... data);
 
-	public abstract Node getFunctionGenome(int functionNdx);
+//	public abstract Node getFunctionGenome(int functionNdx);
 
-	public abstract void setFunctionGenome(int functionNdx, Node genome);
+//	public abstract void setFunctionGenome(int functionNdx, Node genome);
 
 }
